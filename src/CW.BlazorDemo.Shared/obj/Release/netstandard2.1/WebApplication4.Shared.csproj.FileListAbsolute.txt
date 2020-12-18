@@ -1,9 +1,0 @@
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Release\netstandard2.1\WebApplication4.Shared.deps.json
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Release\netstandard2.1\WebApplication4.Shared.dll
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Release\netstandard2.1\WebApplication4.Shared.pdb
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.csprojAssemblyReference.cache
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.AssemblyInfoInputs.cache
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.AssemblyInfo.cs
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.csproj.CoreCompileInputs.cache
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.dll
-C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Release\netstandard2.1\WebApplication4.Shared.pdb

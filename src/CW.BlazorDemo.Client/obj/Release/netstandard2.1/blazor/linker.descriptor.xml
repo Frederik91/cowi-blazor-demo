@@ -1,5 +1,0 @@
-﻿<linker>
-  <assembly fullname="WebApplication4.Client">
-    <type fullname="*" required="true" />
-  </assembly>
-</linker>
