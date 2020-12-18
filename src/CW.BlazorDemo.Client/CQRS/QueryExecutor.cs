@@ -14,13 +14,13 @@ namespace CW.BlazorDemo.Client.CQRS
 {
     public class QueryExecutor : IQueryExecutor
     {
-        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
         private readonly ISession _session;
 
-        public QueryExecutor(IHttpClientFactory httpClientFactory, IConfiguration configuration, ISession session)
+        public QueryExecutor(HttpClient httpClient, IConfiguration configuration, ISession session)
         {
-            _httpClientFactory = httpClientFactory;
+            _httpClient = httpClient;
             _configuration = configuration;
             _session = session;
         }
@@ -48,9 +48,8 @@ namespace CW.BlazorDemo.Client.CQRS
                 Context = context,
                 QueryJson = queryJson
             };
-
-            var httpClient = _httpClientFactory.CreateClient("cqrs");
-            var result = await httpClient.PostAsJsonAsync($"http://localhost:{_session.SelectedPort}/api/messaging/Query/Execute", message, cancellationToken);
+            
+            var result = await _httpClient.PostAsJsonAsync($"http://localhost:{_session.SelectedPort}/api/messaging/Query/Execute", message, cancellationToken);
             result.EnsureSuccessStatusCode();
             var resultJson = await result.Content.ReadAsStringAsync();
             var resultMessage = JsonConvert.DeserializeObject<QueryResultMessage>(resultJson);

@@ -14,13 +14,13 @@ namespace CW.BlazorDemo.Client.CQRS
 {
     public class CommandExecutor : ICommandExecutor
     {
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
         private readonly ISession _session;
+        private HttpClient _httpClient;
 
-        public CommandExecutor(IHttpClientFactory httpClientFactory, IConfiguration configuration, ISession session)
+        public CommandExecutor(HttpClient httpClient, IConfiguration configuration, ISession session)
         {
-            _httpClientFactory = httpClientFactory;
+            _httpClient = httpClient;
             _configuration = configuration;
             _session = session;
         }
@@ -48,8 +48,7 @@ namespace CW.BlazorDemo.Client.CQRS
                 Context = context,
                 CommandJson = commandJson
             };
-            var httpClient = _httpClientFactory.CreateClient("cqrs");
-            var result = await httpClient.PostAsJsonAsync("http://localhost:{_session.SelectedPort}/api/messaging/Command/Execute", message, cancellationToken);
+            var result = await _httpClient.PostAsJsonAsync($"http://localhost:{_session.SelectedPort}/api/messaging/Command/Execute", message, cancellationToken);
             result.EnsureSuccessStatusCode();
             var resultJson = await result.Content.ReadAsStringAsync();
             var resultMessage = JsonConvert.DeserializeObject<CommandResultMessage>(resultJson);

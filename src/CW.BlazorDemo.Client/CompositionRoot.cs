@@ -8,12 +8,7 @@ namespace CW.BlazorDemo.Client
     {
         public void Compose(IServiceRegistry serviceRegistry)
         {
-            serviceRegistry.RegisterFrom<CW.Core.CompositionRoot>();
-
-            serviceRegistry
-                .Register<IQueryExecutor, QueryExecutor>()
-                .Register<ICommandExecutor, CommandExecutor>()
-                ;
+            serviceRegistry.RegisterFrom<Core.CompositionRoot>();
         }
     }
 }
