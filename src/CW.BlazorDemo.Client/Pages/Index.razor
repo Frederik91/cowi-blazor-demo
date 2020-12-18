@@ -1,0 +1,35 @@
+﻿@inherits IndexBase
+@page "/"
+@page "/{Port:int}"
+
+<h1>Blazor demo</h1>
+
+<h2>Available Revits</h2>
+<label for="cars">Select a port:</label>
+
+<select name="cars" id="cars" @bind="Session.SelectedPort">
+    @foreach (var port in Session.AvailablePorts)
+    {
+        <option value="@port">@port</option>
+    }
+</select>
+
+<button @onclick="UpdateDocuments">Update</button>
+
+@if (Document is null)
+{
+    <p>No document is open</p>
+}
+else
+{
+    <h2>@Document.Title</h2>
+
+    <h3>Links</h3>
+    <ul>
+        @foreach (var message in Links)
+        {
+            <li>@message.Title</li>
+        }
+    </ul>
+}
+

@@ -1,0 +1,8 @@
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Debug\netstandard2.1\CW.BlazorDemo.Shared.deps.json
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Debug\netstandard2.1\CW.BlazorDemo.Shared.dll
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\bin\Debug\netstandard2.1\CW.BlazorDemo.Shared.pdb
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Debug\netstandard2.1\CW.BlazorDemo.Shared.AssemblyInfoInputs.cache
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Debug\netstandard2.1\CW.BlazorDemo.Shared.AssemblyInfo.cs
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Debug\netstandard2.1\CW.BlazorDemo.Shared.csproj.CoreCompileInputs.cache
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Debug\netstandard2.1\CW.BlazorDemo.Shared.dll
+C:\Users\frte\source\repos\WebApplication4\WebApplication4\Shared\obj\Debug\netstandard2.1\CW.BlazorDemo.Shared.pdb
